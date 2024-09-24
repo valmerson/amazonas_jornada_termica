@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/scrollama" defer></script>
     <script src="script.js" defer></script>
+    <script src="script.py" defer></script>
   </head>
   <body>
     <div class="scrolly">
@@ -23,6 +24,13 @@
         <div class="step" data-step="">
           <div class="section">
             <h2>Step 1: Projects</h2>
+            <!-- Incluir o mapa gerado com o GeoPandas em um iframe -->
+            <iframe
+              src="meu_mapa_estacoes_folium.html"
+              width="100%"
+              height="600px"
+              style="border: none"
+            ></iframe>
           </div>
         </div>
 
@@ -38,10 +46,10 @@
             </p>
             <div class="carousel">
               <div class="card">
-                <img
-                  src="adicionais/mapbiomas_Porto_de_Moz.jpg"
-                  alt="Porto de Moz - PA"
-                />
+                <div class="mapa-container">
+                  <!-- Iframe que carrega o mapa -->
+                  <iframe src="meu_mapa_estacoes_folium.html"></iframe>
+                </div>
                 <p>Porto de Moz - PA</p>
               </div>
               <div class="card">

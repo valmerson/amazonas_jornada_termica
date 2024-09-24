@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_aa2ced6891364bd79276cb0f95997e6a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_aa2ced6891364bd79276cb0f95997e6a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_aa2ced6891364bd79276cb0f95997e6a = L.map(
+                "map_aa2ced6891364bd79276cb0f95997e6a",
+                {
+                    center: [-2.5, -60.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b2d1c104856e4afcb47e8a1d84001d43 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_b2d1c104856e4afcb47e8a1d84001d43.addTo(map_aa2ced6891364bd79276cb0f95997e6a);
+        
+    
+            var marker_a027a20da56186bc9a12dec2bc034541 = L.marker(
+                [-0.974167, -62.928611],
+                {}
+            ).addTo(map_aa2ced6891364bd79276cb0f95997e6a);
+        
+    
+            var icon_af1421aa653d20f47c019df6abd5678d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a027a20da56186bc9a12dec2bc034541.setIcon(icon_af1421aa653d20f47c019df6abd5678d);
+        
+    
+        var popup_33206c6c653bc092754c550f09e2a9ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d50bc4afee307a20ca45a0ca34c2e9a4 = $(`<div id="html_d50bc4afee307a20ca45a0ca34c2e9a4" style="width: 100.0%; height: 100.0%;"><b>Estação:</b> BARCELOS<br><b>1961-1991 Temp Max:</b> 31.7°C<br><b>1991-2020 Temp Max:</b> 32.5°C<br><b>Diferença de Temp Max:</b> 0.8°C</div>`)[0];
+                popup_33206c6c653bc092754c550f09e2a9ce.setContent(html_d50bc4afee307a20ca45a0ca34c2e9a4);
+            
+        
+
+        marker_a027a20da56186bc9a12dec2bc034541.bindPopup(popup_33206c6c653bc092754c550f09e2a9ce)
+        ;
+
+        
+    
+    
+            var marker_411fc89acd2208b43925eaa16752ad8d = L.marker(
+                [-2.515833, -66.100833],
+                {}
+            ).addTo(map_aa2ced6891364bd79276cb0f95997e6a);
+        
+    
+            var icon_90320778ed92e435f98ab4d6ad4e26d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_411fc89acd2208b43925eaa16752ad8d.setIcon(icon_90320778ed92e435f98ab4d6ad4e26d0);
+        
+    
+        var popup_76757a5d00f6f69278949eb7f4c3e1a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_24077f6cfebc924622e280d6becde985 = $(`<div id="html_24077f6cfebc924622e280d6becde985" style="width: 100.0%; height: 100.0%;"><b>Estação:</b> FONTE BOA<br><b>1961-1991 Temp Max:</b> 30.8°C<br><b>1991-2020 Temp Max:</b> 32.0°C<br><b>Diferença de Temp Max:</b> 1.2°C</div>`)[0];
+                popup_76757a5d00f6f69278949eb7f4c3e1a1.setContent(html_24077f6cfebc924622e280d6becde985);
+            
+        
+
+        marker_411fc89acd2208b43925eaa16752ad8d.bindPopup(popup_76757a5d00f6f69278949eb7f4c3e1a1)
+        ;
+
+        
+    
+    
+            var marker_3276d2a296a3a5c7069bc2c22d413e81 = L.marker(
+                [-3.136944, -58.442778],
+                {}
+            ).addTo(map_aa2ced6891364bd79276cb0f95997e6a);
+        
+    
+            var icon_1a7ea563b8c0938922c1b1d37811e8f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3276d2a296a3a5c7069bc2c22d413e81.setIcon(icon_1a7ea563b8c0938922c1b1d37811e8f1);
+        
+    
+        var popup_e91f00b235c9d2463874e14758d6084b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de946a264bdff0a1983dd4b41fbab0bf = $(`<div id="html_de946a264bdff0a1983dd4b41fbab0bf" style="width: 100.0%; height: 100.0%;"><b>Estação:</b> ITACOATIARA<br><b>1961-1991 Temp Max:</b> 31.2°C<br><b>1991-2020 Temp Max:</b> 32.3°C<br><b>Diferença de Temp Max:</b> 1.1°C</div>`)[0];
+                popup_e91f00b235c9d2463874e14758d6084b.setContent(html_de946a264bdff0a1983dd4b41fbab0bf);
+            
+        
+
+        marker_3276d2a296a3a5c7069bc2c22d413e81.bindPopup(popup_e91f00b235c9d2463874e14758d6084b)
+        ;
+
+        
+    
+    
+            var marker_61973b0e3760378586f22e3524e33756 = L.marker(
+                [-3.103889, -60.015556],
+                {}
+            ).addTo(map_aa2ced6891364bd79276cb0f95997e6a);
+        
+    
+            var icon_1b2fac0206203bc55ccfe117f48433e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_61973b0e3760378586f22e3524e33756.setIcon(icon_1b2fac0206203bc55ccfe117f48433e2);
+        
+    
+        var popup_dcdc6116bd8eaae68c312f2549bdb0aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1f401750e1cb1ff54b8e8427e8b363c = $(`<div id="html_a1f401750e1cb1ff54b8e8427e8b363c" style="width: 100.0%; height: 100.0%;"><b>Estação:</b> MANAUS<br><b>1961-1991 Temp Max:</b> 31.4°C<br><b>1991-2020 Temp Max:</b> 32.3°C<br><b>Diferença de Temp Max:</b> 0.9°C</div>`)[0];
+                popup_dcdc6116bd8eaae68c312f2549bdb0aa.setContent(html_a1f401750e1cb1ff54b8e8427e8b363c);
+            
+        
+
+        marker_61973b0e3760378586f22e3524e33756.bindPopup(popup_dcdc6116bd8eaae68c312f2549bdb0aa)
+        ;
+
+        
+    
+    
+            var marker_86f059e6f5ca5fd355ccbf5ba607a4d4 = L.marker(
+                [-2.642222, -54.943889],
+                {}
+            ).addTo(map_aa2ced6891364bd79276cb0f95997e6a);
+        
+    
+            var icon_94e1ec8a29c039eafbe7a12a7cffdefa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_86f059e6f5ca5fd355ccbf5ba607a4d4.setIcon(icon_94e1ec8a29c039eafbe7a12a7cffdefa);
+        
+    
+        var popup_f25f861633652675469130bb074d20f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e1b8bf63a23e285c6d9d0197a974262 = $(`<div id="html_3e1b8bf63a23e285c6d9d0197a974262" style="width: 100.0%; height: 100.0%;"><b>Estação:</b> BELTERRA<br><b>1961-1991 Temp Max:</b> 30.3°C<br><b>1991-2020 Temp Max:</b> 31.2°C<br><b>Diferença de Temp Max:</b> 0.9°C</div>`)[0];
+                popup_f25f861633652675469130bb074d20f8.setContent(html_3e1b8bf63a23e285c6d9d0197a974262);
+            
+        
+
+        marker_86f059e6f5ca5fd355ccbf5ba607a4d4.bindPopup(popup_f25f861633652675469130bb074d20f8)
+        ;
+
+        
+    
+    
+            var marker_7ffe182db801b03edc7615c097a0ade2 = L.marker(
+                [-4.276986, -55.993087],
+                {}
+            ).addTo(map_aa2ced6891364bd79276cb0f95997e6a);
+        
+    
+            var icon_565d9c22e7b13a46c006205061b8fd3e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7ffe182db801b03edc7615c097a0ade2.setIcon(icon_565d9c22e7b13a46c006205061b8fd3e);
+        
+    
+        var popup_6df9be4d529c09b98ea2416a764ef925 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8bc90b8c606314e360c613bbcde31a47 = $(`<div id="html_8bc90b8c606314e360c613bbcde31a47" style="width: 100.0%; height: 100.0%;"><b>Estação:</b> ITAITUBA<br><b>1961-1991 Temp Max:</b> 32.1°C<br><b>1991-2020 Temp Max:</b> 33.3°C<br><b>Diferença de Temp Max:</b> 1.2°C</div>`)[0];
+                popup_6df9be4d529c09b98ea2416a764ef925.setContent(html_8bc90b8c606314e360c613bbcde31a47);
+            
+        
+
+        marker_7ffe182db801b03edc7615c097a0ade2.bindPopup(popup_6df9be4d529c09b98ea2416a764ef925)
+        ;
+
+        
+    
+    
+            var marker_81b8e61abb9e7b2f28577d13a655acbe = L.marker(
+                [-2.0, -54.076389],
+                {}
+            ).addTo(map_aa2ced6891364bd79276cb0f95997e6a);
+        
+    
+            var icon_7ffc7552b1a91aa950c8dbab737b4297 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_81b8e61abb9e7b2f28577d13a655acbe.setIcon(icon_7ffc7552b1a91aa950c8dbab737b4297);
+        
+    
+        var popup_6a268f997c48b6e7a51cc58623c02cc1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a60a90560af921f26b81f09601a815bf = $(`<div id="html_a60a90560af921f26b81f09601a815bf" style="width: 100.0%; height: 100.0%;"><b>Estação:</b> MONTE ALEGRE<br><b>1961-1991 Temp Max:</b> 30.9°C<br><b>1991-2020 Temp Max:</b> 31.3°C<br><b>Diferença de Temp Max:</b> 0.4°C</div>`)[0];
+                popup_6a268f997c48b6e7a51cc58623c02cc1.setContent(html_a60a90560af921f26b81f09601a815bf);
+            
+        
+
+        marker_81b8e61abb9e7b2f28577d13a655acbe.bindPopup(popup_6a268f997c48b6e7a51cc58623c02cc1)
+        ;
+
+        
+    
+    
+            var marker_a7d9df0537933ff20217acd0ee29aac5 = L.marker(
+                [-1.751055, -52.236186],
+                {}
+            ).addTo(map_aa2ced6891364bd79276cb0f95997e6a);
+        
+    
+            var icon_3b7173f59d43ad416790adc75fae338d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a7d9df0537933ff20217acd0ee29aac5.setIcon(icon_3b7173f59d43ad416790adc75fae338d);
+        
+    
+        var popup_1e4427d266007ac10103333b679c4e1a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b512deff70b96ab9563480aa6ec03644 = $(`<div id="html_b512deff70b96ab9563480aa6ec03644" style="width: 100.0%; height: 100.0%;"><b>Estação:</b> PORTO DE MOZ<br><b>1961-1991 Temp Max:</b> 31.7°C<br><b>1991-2020 Temp Max:</b> 32.2°C<br><b>Diferença de Temp Max:</b> 0.5°C</div>`)[0];
+                popup_1e4427d266007ac10103333b679c4e1a.setContent(html_b512deff70b96ab9563480aa6ec03644);
+            
+        
+
+        marker_a7d9df0537933ff20217acd0ee29aac5.bindPopup(popup_1e4427d266007ac10103333b679c4e1a)
+        ;
+
+        
+    
+</script>
+</html>
