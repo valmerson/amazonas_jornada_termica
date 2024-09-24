@@ -22,7 +22,7 @@ body {
 /* Estilização para a seção de conteúdo fixo  */
 .sticky {
   position: sticky;
-  top: 0;
+  top:0;
   background: #252525;
   width: 22%;
   display: flex;
