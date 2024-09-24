@@ -7,7 +7,7 @@ const scroller = scrollama();
 // Função para trocar o gráfico conforme o passo
 function entrou(resposta) {
   const stepIndex = resposta.index + 1;
-  mainGraphic.src = `images/grafico${stepIndex}.svg`;
+  mainGraphic.src = `images/grafico${stepIndex}.png`;
 
   // Personalizar conteúdo adicional
   console.log(`Entrou no passo ${stepIndex}`);
@@ -16,7 +16,7 @@ function entrou(resposta) {
 // Função para retornar ao gráfico inicial
 function saiu(resposta) {
   if (resposta.index === 0 && resposta.direction === "up") {
-    mainGraphic.src = "images/grafico.svg";
+    mainGraphic.src = "images/grafico.png";
   }
 
   console.log(`Saiu do passo ${resposta.index + 1}`);
