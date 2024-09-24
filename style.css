@@ -1,0 +1,109 @@
+Reset básico body,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.scrolly {
+  display: flex;
+  background-color: #252525;
+  align-items: flex-start;
+  /* Garante que a seção scrolly ocupe toda a altura da janela */
+  height: 100vh;
+}
+
+/* Estilização para a seção de conteúdo fixo  */
+.sticky {
+  position: sticky;
+  top: 0;
+  background: #252525;
+  width: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.sticky img {
+  max-width: 100vh;
+  max-height: 100vh;
+  display: flex;
+  object-fit: contain;
+}
+
+.grafico {
+  width: 100vh;
+  height: 100vh;
+  object-fit: contain;
+  display: flex;
+}
+
+/* Estilização para os passos  */
+.steps {
+  width: 79%; /* Fixa a largura em 60% */
+  height: 100vh;
+  overflow-y: auto; /* Permite que steps role internamente */
+  padding: 20px;
+  box-sizing: border-box; /* Inclui padding no cálculo da largura */
+}
+
+.step {
+  height: 100vh;
+  padding: 20px;
+  border-left: 4px solid #8bc34a; /* Destaque para cada passo */
+  background: darkgray;
+  opacity: 50%;
+  margin-bottom: 20px;
+  scroll-snap-align: start;
+  border-radius: 1%;
+}
+
+.section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  padding: 20px;
+}
+
+.card {
+  flex: none;
+  scroll-snap-align: start;
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  color: #fff;
+  box-sizing: border-box;
+}
