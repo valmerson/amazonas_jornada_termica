@@ -3,7 +3,7 @@ import geopandas as gpd
 import folium
 from shapely.geometry import Point
 
-# Dados fornecidos
+
 data = {
     'uf': ['AM', 'AM', 'AM', 'AM', 'PA', 'PA', 'PA', 'PA'],
     'nome_estacao': ['BARCELOS', 'FONTE BOA', 'ITACOATIARA', 'MANAUS', 'BELTERRA', 'ITAITUBA', 'MONTE ALEGRE', 'PORTO DE MOZ'],
@@ -14,27 +14,27 @@ data = {
     'TEMP MAX DIFF': ['0,8', '1,2', '1,1', '0,9', '0,9', '1,2', '0,4', '0,5']
 }
 
-# Criando o DataFrame
+
 df = pd.DataFrame(data)
 
-# Substituindo a vírgula por ponto para valores numéricos
+
 df['1961-1991 TEMP MAX'] = df['1961-1991 TEMP MAX'].str.replace(',', '.').astype(float)
 df['1991-2020 TEMP MAX'] = df['1991-2020 TEMP MAX'].str.replace(',', '.').astype(float)
 df['TEMP MAX DIFF'] = df['TEMP MAX DIFF'].str.replace(',', '.').astype(float)
 
-# Criando uma coluna de geometria usando as latitudes e longitudes
+
 geometry = [Point(xy) for xy in zip(df['longitude'], df['latitude'])]
 gdf = gpd.GeoDataFrame(df, geometry=geometry)
 
-# Criar um mapa base usando folium, com as tiles Esri World Imagery
+
 mapa = folium.Map(
-    location=[-2.5, -60.0],  # Centralizado na região Norte do Brasil
+    location=[-2.5, -60.0], 
     zoom_start=5,
-    tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',  # Tile URL para o Esri World Imagery
+    tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',  
     attr="Esri"
 )
 
-# Adicionando os pontos de gdf no mapa com os dados
+
 for idx, row in gdf.iterrows():
     folium.Marker(
         location=[row['latitude'], row['longitude']],
@@ -47,6 +47,5 @@ for idx, row in gdf.iterrows():
         icon=folium.Icon(color='red', icon='none')
     ).add_to(mapa)
 
-# Salvar o mapa em um arquivo HTML
 mapa.save("meu_mapa_estacoes_folium.html")
 
