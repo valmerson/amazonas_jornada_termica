@@ -470,7 +470,6 @@ p.callout-text {
   }
 } */
 
-/* Estilos Gerais */
 body {
   font-family: "DM Sans", Arial, sans-serif;
   line-height: 1.6;
@@ -480,7 +479,7 @@ body {
   background-color: #252525;
 }
 
-/* Estilos para Títulos */
+/* Estilos para títulos */
 h1,
 h2,
 h3,
@@ -497,7 +496,6 @@ h6 {
   min-height: 100vh;
 }
 
-/* Sticky Sidebar */
 .sticky {
   position: sticky;
   top: 0;
@@ -507,34 +505,20 @@ h6 {
   justify-content: center;
   align-items: center;
   background-color: #252525;
-  transition: all 0.3s ease;
-  z-index: 1; /* Garantir que fique abaixo dos steps em mobile */
 }
 
-/* Imagens dentro do Sticky */
-.sticky img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Gráfico */
 .grafico {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
-/* Steps */
 .steps {
   width: 79%;
   padding: 20px;
   box-sizing: border-box;
-  position: relative;
-  z-index: 2; /* Garantir que fique acima do sticky em mobile */
 }
 
-/* Cards Individuais */
 .step {
   min-height: 100vh;
   padding: 40px;
@@ -545,13 +529,11 @@ h6 {
   transition: all 0.3s ease;
 }
 
-/* Seção */
 .section {
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Títulos dentro das Steps */
 h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
@@ -585,7 +567,6 @@ p {
   color: #25343d;
 }
 
-/* Mapas e Embeds */
 #interactive-map {
   width: 100%;
   height: 500px;
@@ -727,7 +708,7 @@ p {
   overflow: hidden;
 }
 
-/* Responsividade para Telas Médias */
+/* Responsividade */
 @media (max-width: 768px) {
   .main-title {
     font-size: 2.8em;
@@ -744,96 +725,8 @@ p {
   .section-title {
     font-size: 1.8em;
   }
-
-  /* Ajustes do Layout para 768px */
-  .sticky {
-    width: 100%; /* Ocupa toda a largura */
-    height: 80px; /* Altura reduzida */
-    opacity: 0.7; /* Transparência */
-    position: absolute; /* Posicionado sobre os steps */
-    top: 0;
-    left: 0;
-    z-index: 0; /* Fica atrás dos steps */
-  }
-
-  .steps {
-    width: 100%; /* Ocupa toda a largura */
-    padding-top: 100px; /* Espaço para a sticky */
-    z-index: 1; /* Fica acima do sticky */
-  }
-
-  .step {
-    padding: 20px;
-    margin-bottom: 10px;
-  }
 }
 
-/* Responsividade para Telas Pequenas */
-@media (max-width: 480px) {
-  .main-title {
-    font-size: 2em;
-  }
-
-  .subtitle {
-    font-size: 0.9em;
-  }
-
-  .story-intro p {
-    font-size: 0.9em;
-  }
-
-  .sticky {
-    width: 100%;
-    height: 80px;
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-
-  .steps {
-    width: 100%;
-    padding-top: 100px;
-    z-index: 1;
-  }
-
-  .step {
-    padding: 20px;
-    margin-bottom: 10px;
-  }
-
-  .section {
-    max-width: 100%;
-  }
-
-  .conclusion-title,
-  .section-title {
-    font-size: 1.5em;
-  }
-
-  /* Ajustes de Imagens para Mobile */
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .grafico,
-  .sticky img,
-  .steps img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  /* Ajuste de Layout de Duas Colunas */
-  .two-column-container {
-    flex-direction: column;
-  }
-}
-
-/* Estilos Adicionais para Steps e Conclusão */
 .step ul {
   list-style-type: none;
   padding-left: 0;
@@ -857,7 +750,7 @@ p {
   color: #4a4a4a;
 }
 
-/* Estilos para o Step de Conclusão */
+/* Estilos para o step de conclusão */
 .conclusion-step {
   background-color: #f9f9f9;
   border-left: 5px solid #25343d;
@@ -936,7 +829,8 @@ p {
   border-top: 1px solid #ddd;
 }
 
-/* Estilos para o Callout */
+/* Estilos para o callout */
+
 .callout {
   border: 1px solid #9ebbdd;
   border-radius: 8px;
@@ -969,66 +863,4 @@ p {
   font-size: 20px;
   vertical-align: middle;
   margin-right: 10px;
-}
-
-.callout-title {
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-p.callout-text {
-  margin-bottom: 8px;
-  line-height: 1.3;
-  font-size: 14px;
-  flex-grow: 1;
-}
-
-.callout-link {
-  color: #9ebbdd;
-  text-decoration: none;
-  border-bottom: 1px solid #9ebbdd;
-}
-
-.callout-link:hover {
-  text-decoration: none;
-  border-bottom: 2px solid #9ebbdd;
-}
-
-/* Layout de Duas Colunas */
-.two-column-container {
-  display: flex;
-  gap: 40px;
-  margin: 20px 0;
-}
-
-.column {
-  flex: 1;
-}
-
-.text-column p {
-  margin: 0;
-}
-
-/* Ajustes de Responsividade para Duas Colunas */
-@media (max-width: 768px) {
-  .two-column-container {
-    flex-direction: column;
-  }
-}
-
-/* Garantir que todas as imagens sejam responsivas */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Ajustes Específicos para Imagens dentro de .grafico, .sticky e .steps */
-.grafico,
-.sticky img,
-.steps img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
 }
