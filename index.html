@@ -1,116 +1,608 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jornada Térmica do Amazonas</title>
+    <title>Rio Amazonas em transformação</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://unpkg.com/scrollama" defer></script>
-    <script src="script.js" defer></script>
-    <script src="script.py" defer></script>
   </head>
   <body>
     <div class="scrolly">
       <div class="sticky">
         <img
+          src="images/grafico.png"
+          alt="Gráfico principal"
           id="main-graphic"
           class="grafico"
-          src="images/grafico.png"
-          alt="Main Graphic"
         />
       </div>
 
       <div class="steps">
-        <div class="step" data-step="">
+        <div class="step first-step" data-step="1">
           <div class="section">
-            <h2>Step 1: Projects</h2>
-            <!-- Incluir o mapa gerado com o GeoPandas em um iframe -->
-            <iframe
-              src="meu_mapa_estacoes_folium.html"
-              width="100%"
-              height="600px"
-              style="border: none"
-            ></iframe>
+            <header class="story-header">
+              <h1 id="rio-amazonas-em-transformação" class="main-title">
+                Rio Amazonas em transformação
+              </h1>
+              <p class="subtitle">
+                Uma análise das mudanças de temperatura ao longo do maior rio do
+                mundo
+              </p>
+              <p class="credits">
+                por Caê Vatiero, Paulo Fehlauer e Valmerson Barbosa.
+              </p>
+            </header>
+
+            <div class="story-intro">
+              <p class="intro">
+                O Rio Amazonas, vital para o equilíbrio climático global, está
+                experimentando mudanças significativas em sua temperatura. Nossa
+                investigação revela uma tendência preocupante de aquecimento e
+                suas implicações para o ecossistema amazônico.
+              </p>
+              <div class="two-column-container">
+                <div class="column text-column">
+                  <p>
+                    Através da análise de dados do Instituto Nacional de
+                    Meteorologia (Inmet), examinamos as variações nas
+                    <span class="destaque">normais climatológicas de temperatura máxima</span> em
+                    estações ao longo do rio, identificando padrões e tendências
+                    que evidenciam os impactos da atividade humana e das
+                    mudanças climáticas na região. Foram comparadas as normais
+                    para os períodos entre <span class="destaque">1961-1990 e 1991-2020</span>.
+                  </p>
+                </div>
+                <div class="column callout-column">
+                  <div class="callout callout-info">
+                    <div class="callout-header">
+                      <svg
+                        class="callout-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"
+                        ></path>
+                      </svg>
+                      <strong class="callout-title"
+                        >Normais climatológicas</strong
+                      >
+                    </div>
+                    <p class="callout-text">
+                      São valores médios calculados para um período
+                      relativamente longo e uniforme, compreendendo no mínimo
+                      três décadas consecutivas, representando as
+                      características médias do clima em um determinado local.
+                      Para saber mais, acesse o
+                      <a
+                        href="https://portal.inmet.gov.br/uploads/normais/NORMAISCLIMATOLOGICAS.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="callout-link"
+                      >
+                        relatório do Inmet </a
+                      >.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="map-section">
+              <h2 id="pontos-de-medição" class="section-title">
+                Pontos de medição
+              </h2>
+              <p>
+                Nesta reportagem, examinamos 7 pontos estratégicos ao longo do
+                rio, seguindo seu curso de leste para oeste. Clique nos
+                marcadores para saber quais são.
+              </p>
+              <div id="map" class="interactive-map"></div>
+            </div>
           </div>
         </div>
 
         <div class="step" data-step="2">
           <div class="section">
             <h2>Porto de Moz - PA</h2>
-            <h4>+0,5 Cº</h4>
-            <p>Conteúdo adicional para o passo 2.</p>
+            <h3>+0,5°C</h3>
             <p>
-              Conteúdo adicional para o passo 2.Conteúdo adicional para o passo
-              2.Conteúdo adicional para o passo 2.Conteúdo adicional para o
-              passo 2.Conteúdo adicional para o passo 2.
+              Porto de Moz, município de origem indígena do povo Monturús,
+              enfrenta graves desafios ambientais devido à exploração madeireira
+              e ao avanço das atividades agropecuárias, resultando em
+              desmatamento e grilagem de terras. Segundo o Monitor ODS Pará, o
+              município tem dificuldades em atingir as metas da ODS 15 (Vida
+              Terrestre), que busca proteger os ecossistemas e promover o uso
+              sustentável da terra. A degradação ambiental afeta tanto a
+              biodiversidade quanto a vida das comunidades tradicionais que
+              dependem da floresta.
             </p>
-            <div class="carousel">
-              <div class="card">
-                <div class="mapa-container">
-                  <!-- Iframe que carrega o mapa -->
-                  <iframe src="meu_mapa_estacoes_folium.html"></iframe>
-                </div>
-                <p>Porto de Moz - PA</p>
-              </div>
-              <div class="card">
-                <img src="assets/az.jpg" alt="Amazon" />
-                <p>Amazon Strategic Business Overview</p>
-              </div>
-              <div class="card">
-                <img src="assets/lg.jpg" alt="LG" />
-                <p>LG Competition Overview</p>
-              </div>
-              <div class="card">
-                <img src="assets/cl.jpg" alt="Chile" />
-                <p>Impact of earthquakes in Chile (dummy data)</p>
-              </div>
-              <div class="card">
-                <img src="assets/AR.jpg" alt="Argentina" />
-                <p>
-                  Distribution of business internet customers in Argentina
-                  (dummy data)
-                </p>
-              </div>
-            </div>
+            <p>
+              O desmatamento em Porto de Moz também está diretamente relacionado
+              ao aumento das temperaturas na região. A perda de cobertura
+              florestal compromete a regulação do clima, agravando o aquecimento
+              local, o que traz impactos como maior dificuldade no cultivo de
+              alimentos, acesso à água e riscos de incêndios florestais. O
+              cumprimento das metas da ODS 15 é essencial para mitigar esses
+              efeitos e garantir um futuro sustentável para o município.
+            </p>
+            <ul>
+              <li>Temperatura máxima 1961-1991: <span>31,7°C</span></li>
+              <li>Temperatura máxima 1991-2020: <span>32,2°C</span></li>
+            </ul>
+
+            <h4>Variação mês a mês</h4>
+            <iframe
+              title="Porto de Moz - Temperatura Média"
+              aria-label="Interactive line chart"
+              id="datawrapper-chart-LIRiJ"
+              src="https://datawrapper.dwcdn.net/LIRiJ/1/"
+              scrolling="no"
+              frameborder="0"
+              style="width: 0; min-width: 100% !important; border: none"
+              height="289"
+              data-external="1"
+            ></iframe>
+            <script type="text/javascript">
+              !(function () {
+                "use strict";
+                window.addEventListener("message", function (a) {
+                  if (void 0 !== a.data["datawrapper-height"]) {
+                    var e = document.querySelectorAll("iframe");
+                    for (var t in a.data["datawrapper-height"])
+                      for (var r = 0; r < e.length; r++)
+                        if (e[r].contentWindow === a.source) {
+                          var i = a.data["datawrapper-height"][t] + "px";
+                          e[r].style.height = i;
+                        }
+                  }
+                });
+              })();
+            </script>
           </div>
         </div>
+
         <div class="step" data-step="3">
           <div class="section">
-            <h2>Step 2</h2>
-            <p>Conteúdo adicional para o passo 2.</p>
+            <h2>Monte Alegre - PA</h2>
+            <h3>+0,4°C</h3>
+            <p>
+              Monte Alegre, no oeste do Pará, tem passado por transformações
+              significativas devido à expansão das atividades agropecuárias,
+              especialmente na pecuária. Entre 1991 e 2020, o rebanho bovino na
+              região cresceu 50%, segundo dados da Pesquisa Pecuária Municipal
+              do IBGE (2021). Esse aumento expressivo impulsionou a conversão de
+              áreas de floresta em pastagens, o que tem agravado o desmatamento
+              e comprometido a biodiversidade local. Além disso, a região abriga
+              sítios arqueológicos datados de até 11.200 anos atrás, conforme o
+              Cadastro Nacional de Sítios Arqueológicos do IPHAN (2020),
+              destacando a importância cultural e histórica da área.
+            </p>
+            <p>
+              O Monitor ODS Pará também aponta que Monte Alegre enfrenta grandes
+              desafios no cumprimento das metas da ODS 15 (Vida Terrestre), com
+              a necessidade urgente de conter o avanço do desmatamento e
+              promover a gestão sustentável das terras. O impacto da expansão
+              pecuária contribui para a perda de habitats naturais e dificulta a
+              regeneração das áreas degradadas.
+            </p>
+            <ul>
+              <li>Temperatura máxima 1961-1991: <span>30,9°C</span></li>
+              <li>Temperatura máxima 1991-2020: <span>31,3°C</span></li>
+            </ul>
+
+            <h4>Variação mês a mês</h4>
+            <iframe
+              title="Monte Alegre - Temperatura Média"
+              aria-label="Interactive line chart"
+              id="datawrapper-chart-crVmX"
+              src="https://datawrapper.dwcdn.net/crVmX/1/"
+              scrolling="no"
+              frameborder="0"
+              style="width: 0; min-width: 100% !important; border: none"
+              height="289"
+              data-external="1"
+            ></iframe>
+            <script type="text/javascript">
+              !(function () {
+                "use strict";
+                window.addEventListener("message", function (a) {
+                  if (void 0 !== a.data["datawrapper-height"]) {
+                    var e = document.querySelectorAll("iframe");
+                    for (var t in a.data["datawrapper-height"])
+                      for (var r = 0; r < e.length; r++)
+                        if (e[r].contentWindow === a.source) {
+                          var i = a.data["datawrapper-height"][t] + "px";
+                          e[r].style.height = i;
+                        }
+                  }
+                });
+              })();
+            </script>
           </div>
         </div>
+
         <div class="step" data-step="4">
           <div class="section">
-            <h2>Step 2</h2>
-            <p>Conteúdo adicional para o passo 2.</p>
+            <h2>Belterra - PA</h2>
+            <h3>+0,9°C</h3>
+            <p>
+              Belterra, município localizado no oeste do Pará, enfrenta desafios
+              ambientais significativos relacionados ao desmatamento e à
+              expansão de atividades agrícolas. Fundada na década de 1930 como
+              parte de um projeto de plantação de seringueiras, a cidade ainda
+              mantém vastas áreas de floresta, mas tem sido cada vez mais
+              pressionada pelo avanço do agronegócio e pela extração de madeira.
+              A área de cultivo de soja, por exemplo, aumentou mais de 500%
+              entre 2000 e 2020, segundo o Relatório da Soja da EMBRAPA (2021).
+            </p>
+            <p>
+              De acordo com o Monitor ODS Pará, que avalia o cumprimento das
+              metas da Agenda 2030 da ONU, Belterra apresenta dificuldades na
+              ODS 15 (Vida Terrestre), especialmente no que diz respeito à
+              conservação da biodiversidade e à gestão sustentável dos recursos
+              florestais. A expansão agrícola na região tem causado não só
+              desmatamento, mas também a degradação dos solos, impactando a
+              qualidade ambiental e as condições de vida das comunidades locais.
+            </p>
+            <ul>
+              <li>Temperatura máxima 1961-1991: <span>30,3°C</span></li>
+              <li>Temperatura máxima 1991-2020: <span>31,2°C</span></li>
+            </ul>
+
+            <h4>Variação mês a mês</h4>
+            <iframe
+              title="Belterra - Temperatura Média"
+              aria-label="Interactive line chart"
+              id="datawrapper-chart-BSVG4"
+              src="https://datawrapper.dwcdn.net/BSVG4/1/"
+              scrolling="no"
+              frameborder="0"
+              style="width: 0; min-width: 100% !important; border: none"
+              height="289"
+              data-external="1"
+            ></iframe>
+            <script type="text/javascript">
+              !(function () {
+                "use strict";
+                window.addEventListener("message", function (a) {
+                  if (void 0 !== a.data["datawrapper-height"]) {
+                    var e = document.querySelectorAll("iframe");
+                    for (var t in a.data["datawrapper-height"])
+                      for (var r = 0; r < e.length; r++)
+                        if (e[r].contentWindow === a.source) {
+                          var i = a.data["datawrapper-height"][t] + "px";
+                          e[r].style.height = i;
+                        }
+                  }
+                });
+              })();
+            </script>
           </div>
         </div>
+
         <div class="step" data-step="5">
           <div class="section">
-            <h2>Step 2</h2>
-            <p>Conteúdo adicional para o passo 2.</p>
+            <h2>Itacoatiara - AM</h2>
+            <h3>+1,1°C</h3>
+            <p>
+              Itacoatiara, no estado do Amazonas, enfrenta desafios ambientais
+              significativos, especialmente relacionados ao desmatamento e à
+              expansão da agricultura. O município é um dos que mais sofreu com
+              a degradação ambiental na região, com o PRODES/INPE registrando
+              10,25 km² de desflorestamento ilegal em 2020. Além disso, a rápida
+              expansão da produção de soja tem intensificado a pressão sobre os
+              ecossistemas locais, com a área plantada crescendo mais de 200%
+              entre 2000 e 2020, segundo dados da Série Histórica das Safras da
+              CONAB (2021). Paralelamente, o município registrou um aumento
+              populacional de cerca de 40% entre 1991 e 2020, conforme o Censo
+              Demográfico do IBGE (2020).
+            </p>
+            <ul>
+              <li>Temperatura máxima 1961-1991: <span>31,2°C</span></li>
+              <li>Temperatura máxima 1991-2020: <span>32,3°C</span></li>
+            </ul>
+
+            <h4>Variação mês a mês</h4>
+            <iframe
+              title="Itacoatiara - Temperatura Média"
+              aria-label="Interactive line chart"
+              id="datawrapper-chart-Cmg61"
+              src="https://datawrapper.dwcdn.net/Cmg61/1/"
+              scrolling="no"
+              frameborder="0"
+              style="width: 0; min-width: 100% !important; border: none"
+              height="289"
+              data-external="1"
+            ></iframe>
+            <script type="text/javascript">
+              !(function () {
+                "use strict";
+                window.addEventListener("message", function (a) {
+                  if (void 0 !== a.data["datawrapper-height"]) {
+                    var e = document.querySelectorAll("iframe");
+                    for (var t in a.data["datawrapper-height"])
+                      for (var r = 0; r < e.length; r++)
+                        if (e[r].contentWindow === a.source) {
+                          var i = a.data["datawrapper-height"][t] + "px";
+                          e[r].style.height = i;
+                        }
+                  }
+                });
+              })();
+            </script>
           </div>
         </div>
+
         <div class="step" data-step="6">
           <div class="section">
-            <h2>Step 2</h2>
-            <p>Conteúdo adicional para o passo 2.</p>
+            <h2>Manaus - AM</h2>
+            <h3>+0,9°C</h3>
+            <p>
+              Manaus, a capital do estado do Amazonas, tem enfrentado um aumento
+              preocupante nas taxas de desmatamento, especialmente em 2020. De
+              acordo com dados do Sistema de Alerta de Desmatamento (SAD) do
+              Instituto do Homem e Meio Ambiente da Amazônia (IHMAM), a cidade
+              registrou cerca de 9,6 km² de desmatamento em áreas urbanas e de
+              influência urbana em 2020. Esse cenário alarmante é resultado da
+              pressão crescente sobre os recursos naturais, impulsionada pela
+              expansão urbana e pela atividade econômica, como a agricultura e a
+              pecuária.
+            </p>
+            <p>
+              Além disso, o Projeto de Monitoramento do Desmatamento na Amazônia
+              Legal por Satélite (PRODES) do INPE indicou que o desmatamento na
+              Amazônia como um todo cresceu 9,5% entre 2019 e 2020, com Manaus
+              sendo uma das cidades que mais contribuiu para essa tendência
+              devido à sua localização e ao aumento da ocupação irregular de
+              áreas de floresta. Esse desmatamento não apenas compromete a
+              biodiversidade e a saúde dos ecossistemas locais, mas também tem
+              consequências diretas para a qualidade de vida dos habitantes,
+              incluindo a poluição do ar e a degradação dos recursos hídricos.
+            </p>
+            <ul>
+              <li>Temperatura máxima 1961-1991: <span>31,4°C</span></li>
+              <li>Temperatura máxima 1991-2020: <span>32,3°C</span></li>
+            </ul>
+
+            <h4>Variação mês a mês</h4>
+            <iframe
+              title="Manaus - Temperatura Média"
+              aria-label="Interactive line chart"
+              id="datawrapper-chart-P5SII"
+              src="https://datawrapper.dwcdn.net/P5SII/1/"
+              scrolling="no"
+              frameborder="0"
+              style="width: 0; min-width: 100% !important; border: none"
+              height="289"
+              data-external="1"
+            ></iframe>
+            <script type="text/javascript">
+              !(function () {
+                "use strict";
+                window.addEventListener("message", function (a) {
+                  if (void 0 !== a.data["datawrapper-height"]) {
+                    var e = document.querySelectorAll("iframe");
+                    for (var t in a.data["datawrapper-height"])
+                      for (var r = 0; r < e.length; r++)
+                        if (e[r].contentWindow === a.source) {
+                          var i = a.data["datawrapper-height"][t] + "px";
+                          e[r].style.height = i;
+                        }
+                  }
+                });
+              })();
+            </script>
           </div>
         </div>
+
         <div class="step" data-step="7">
           <div class="section">
-            <h2>Step 2</h2>
-            <p>Conteúdo adicional para o passo 2.</p>
+            <h2>Barcelos - AM</h2>
+            <h3>+0,8°C</h3>
+            <p>
+              Barcelos, no estado do Amazonas, é um município que tem visto um
+              aumento significativo no fluxo de turistas, especialmente para
+              atividades de pesca esportiva, que cresceu 150% entre 2000 e 2020,
+              segundo o Relatório Anual da Secretaria de Turismo do Amazonas
+              (2021). Apesar de o turismo trazer receitas para a região, ele
+              também impõe desafios significativos ao meio ambiente,
+              especialmente em um município que abriga uma rica biodiversidade.
+              O crescimento da atividade turística pode resultar em impactos
+              negativos, como a degradação de habitats, poluição dos corpos
+              d'água e a pressão sobre os recursos naturais.
+            </p>
+            <ul>
+              <li>Temperatura máxima 1961-1991: <span>31,7°C</span></li>
+              <li>Temperatura máxima 1991-2020: <span>32,5°C</span></li>
+            </ul>
+
+            <h4>Variação mês a mês</h4>
+            <iframe
+              title="Barcelos - Temperatura Média"
+              aria-label="Interactive line chart"
+              id="datawrapper-chart-ZPgXr"
+              src="https://datawrapper.dwcdn.net/ZPgXr/1/"
+              scrolling="no"
+              frameborder="0"
+              style="width: 0; min-width: 100% !important; border: none"
+              height="289"
+              data-external="1"
+            ></iframe>
+            <script type="text/javascript">
+              !(function () {
+                "use strict";
+                window.addEventListener("message", function (a) {
+                  if (void 0 !== a.data["datawrapper-height"]) {
+                    var e = document.querySelectorAll("iframe");
+                    for (var t in a.data["datawrapper-height"])
+                      for (var r = 0; r < e.length; r++)
+                        if (e[r].contentWindow === a.source) {
+                          var i = a.data["datawrapper-height"][t] + "px";
+                          e[r].style.height = i;
+                        }
+                  }
+                });
+              })();
+            </script>
           </div>
         </div>
+
         <div class="step" data-step="8">
           <div class="section">
-            <h2>Step 2</h2>
-            <p>Conteúdo adicional para o passo 2.</p>
+            <h2>Fonte Boa - AM</h2>
+            <h3>+1,2°C</h3>
+            <p>
+              Fonte Boa, localizado no estado do Amazonas, tem vivenciado um
+              crescimento populacional significativo, com um aumento de
+              aproximadamente 25% entre 1991 e 2020, conforme o Censo
+              Demográfico do IBGE (2020). Esse crescimento, por sua vez, tem
+              gerado pressão sobre os recursos naturais da região,
+              intensificando as atividades econômicas e a exploração dos
+              recursos florestais. A cidade, que é rodeada por vastas áreas de
+              floresta amazônica, enfrenta desafios crescentes em sua busca por
+              um desenvolvimento sustentável.
+            </p>
+            <p>
+              De acordo com o Monitor ODS Amazonas, a área desmatada em Fonte
+              Boa aumentou cerca de 30% entre 2000 e 2020, segundo dados do
+              Projeto PRODES do INPE (2021). Esse desmatamento não apenas
+              compromete a biodiversidade local, mas também impacta as
+              comunidades que dependem da floresta para sua subsistência. O
+              avanço das atividades agropecuárias e a exploração madeireira são
+              os principais fatores que impulsionam essa degradação ambiental.
+            </p>
+            <ul>
+              <li>Temperatura máxima 1961-1991: <span>30,8°C</span></li>
+              <li>Temperatura máxima 1991-2020: <span>32,0°C</span></li>
+            </ul>
+
+            <h4>Variação mês a mês</h4>
+            <iframe
+              title="Fonte Boa - Temperatura Média"
+              aria-label="Interactive line chart"
+              id="datawrapper-chart-AfNb1"
+              src="https://datawrapper.dwcdn.net/AfNb1/1/"
+              scrolling="no"
+              frameborder="0"
+              style="width: 0; min-width: 100% !important; border: none"
+              height="289"
+              data-external="1"
+            ></iframe>
+            <script type="text/javascript">
+              !(function () {
+                "use strict";
+                window.addEventListener("message", function (a) {
+                  if (void 0 !== a.data["datawrapper-height"]) {
+                    var e = document.querySelectorAll("iframe");
+                    for (var t in a.data["datawrapper-height"])
+                      for (var r = 0; r < e.length; r++)
+                        if (e[r].contentWindow === a.source) {
+                          var i = a.data["datawrapper-height"][t] + "px";
+                          e[r].style.height = i;
+                        }
+                  }
+                });
+              })();
+            </script>
           </div>
         </div>
+        <div class="step conclusion-step" data-step="9">
+          <div class="section conclusion-section">
+            <h2 class="conclusion-title">Conclusões</h2>
+
+            <p class="conclusion-intro">
+              A investigação sobre as mudanças de temperatura ao longo do Rio
+              Amazonas revela um cenário preocupante de aquecimento, com
+              implicações profundas para o ecossistema amazônico e além. Aqui
+              estão as principais conclusões de nossa análise:
+            </p>
+
+            <div class="conclusion-content">
+              <h3 class="conclusion-subtitle">
+                Gradiente de aquecimento e impactos na biodiversidade
+              </h3>
+              <p>
+                Observamos um gradiente de aquecimento ao longo do rio, com
+                aumentos mais pronunciados no Alto Amazonas. Esse aumento de
+                temperatura não é apenas um número abstrato - ele representa uma
+                ameaça real para a rica biodiversidade da região. Em Barcelos,
+                por exemplo, a alteração da temperatura da água pode afetar
+                diretamente os ciclos reprodutivos dos peixes ornamentais, uma
+                parte crucial do ecossistema local e da economia regional.
+              </p>
+
+              <h3 class="conclusion-subtitle">
+                Pressão antrópica e desafios de conservação
+              </h3>
+              <p>
+                O crescimento populacional nos pontos analisados, combinado com
+                a expansão agrícola (especialmente da soja), está exercendo uma
+                pressão significativa sobre o ecossistema amazônico. Atividades
+                econômicas intensivas, como a mineração, estão exacerbando o
+                aquecimento local. A criação de áreas protegidas, no entanto,
+                parece mitigar parcialmente o aumento de temperatura,
+                sublinhando a importância crucial das políticas de conservação.
+              </p>
+
+              <h3 class="conclusion-subtitle">
+                Impactos socioeconômicos e culturais
+              </h3>
+              <p>
+                O aumento da temperatura não afeta apenas o meio ambiente, mas
+                também tem impactos diretos sobre as atividades econômicas
+                tradicionais, como a pesca e o extrativismo. Mudanças nos
+                padrões de chuva e temperatura podem impactar significativamente
+                a produtividade agrícola, que é crucial para a economia local.
+                Além disso, o patrimônio cultural da região, incluindo sítios
+                arqueológicos importantes como os de Monte Alegre, está sob
+                risco devido às mudanças no microclima que podem acelerar sua
+                degradação.
+              </p>
+            </div>
+
+            <div class="conclusion-resources">
+              <h3 class="conclusion-subtitle">Fontes de dados e metodologia</h3>
+              <p>
+                Nossa metodologia envolveu a coleta de dados das normais
+                climatológicas do
+                <em>Instituto Nacional de Meteorologia (Inmet)</em>, que foram
+                padronizados de forma a permitir a análise e a criação das
+                visualizações interativas utilizando o <em>Datawrapper</em>. A
+                análise dos dados foi complementada pela revisão de literatura
+                sobre o tema.
+              </p>
+              <p>
+                Para aqueles interessados em explorar mais profundamente nossos
+                dados e análises, os dados brutos podem ser acessados no
+                <a href="https://portal.inmet.gov.br/normais" target="_blank"
+                  >portal de dados do Inmet</a
+                >.
+              </p>
+            </div>
+
+            <p class="conclusion-footer">
+              Desenvolvido como parte integrante do Master em Jornalismo de
+              Dados, Automação e Data Storytelling do Insper.
+            </p>
+          </div>
+        </div>
+        <!-- Add more step divs for other locations -->
       </div>
     </div>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="script.js"></script>
   </body>
 </html>

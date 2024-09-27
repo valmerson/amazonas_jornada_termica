@@ -1,69 +1,60 @@
-Reset básico body,
-h2,
-p {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
 body {
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
   margin: 0;
   overflow-x: hidden;
+  background-color: #252525;
+}
+
+/* Estilos para títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
 }
 
 .scrolly {
   display: flex;
-  background-color: #252525;
   align-items: flex-start;
-  
-  height: 100vh;
+  min-height: 100vh;
 }
-
 
 .sticky {
   position: sticky;
   top: 0;
-  background: #252525;
   width: 22%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
-  object-fit: contain;
-}
-
-.sticky img {
-  max-width: 100vh;
-  max-height: 100vh;
-  display: flex;
-  object-fit: contain;
+  background-color: #252525;
 }
 
 .grafico {
-  width: 100vh;
-  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-  display: flex;
 }
 
-
 .steps {
-  width: 79%; 
-  height: 100vh;
-  overflow-y: auto; 
+  width: 79%;
   padding: 20px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .step {
-  height: 100vh;
-  padding: 20px;
-  border-left: 4px solid #8bc34a; 
-  background: darkgray;
-  opacity: 100%;
+  min-height: 100vh;
+  padding: 40px;
   margin-bottom: 20px;
-  scroll-snap-align: start;
-  border-radius: 1%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .section {
@@ -71,39 +62,410 @@ body {
   margin: 0 auto;
 }
 
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 16px;
-  padding: 20px;
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
-.card {
-  flex: none;
-  scroll-snap-align: start;
-  width: 300px;
+h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #4a4a4a;
+  transition: color 0.3s ease;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* Estilo para steps ativos, excluindo o primeiro step e o step de conclusão */
+.step:not(.first-step):not(.conclusion-step).active h2,
+.step:not(.first-step):not(.conclusion-step).active h3 {
+  color: #a70c26;
+}
+
+/* Estilos específicos para o primeiro step */
+.first-step h2,
+.first-step h3 {
+  color: #25343d;
+}
+
+#interactive-map {
+  width: 100%;
+  height: 500px;
+  background-color: #e0e0e0;
+  margin-top: 20px;
+}
+
+.datawrapper-embed {
+  width: 100%;
+  height: 400px;
+  margin-top: 30px;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-div-icon {
+  background: none;
+  border: none;
+}
+
+.marker-pin {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% 50% 50% 0;
+  background: #ff4136;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -40px 0 0 -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marker-text {
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  transform: rotate(45deg);
+  width: 100%;
+  text-align: center;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.leaflet-popup-content {
+  margin: 8px 12px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+/* Estilos para o primeiro step */
+.first-step {
+  background-color: #25343d;
+  padding: 40px 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.story-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.main-title {
+  font-size: 3em;
+  color: #ddd;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.subtitle {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 1.4em;
+  font-style: italic;
+  color: #ddd;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.credits {
+  font-size: 0.9em;
+  color: #ddd;
+  margin-bottom: 60px;
+}
+
+.story-intro p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: justify;
+}
+
+.destaque {
+  font-weight: 500;
+  color: #9ebbdd;
+}
+.map-section {
+  background-color: #ddd;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 2em;
+  color: #25343d;
+  margin: 0 0 15px 0;
+}
+
+.map-intro {
+  margin-bottom: 20px;
+  color: #25343d;
+}
+
+.interactive-map {
+  height: 500px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  position: relative;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.8em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+
+  .story-intro {
+    font-size: 1em;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+  }
 }
 
-.card p {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+.step ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 30px 0;
+}
+
+.step ul li {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.step ul li span {
+  font-weight: bold;
+  color: #a70c26;
+}
+
+.step h4 {
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+/* Estilos para o step de conclusão */
+.conclusion-step {
+  background-color: #f9f9f9;
+  border-left: 5px solid #25343d;
+  padding: 30px;
+}
+
+/* Estilos específicos para o step de conclusão */
+.conclusion-step h2,
+.conclusion-step h3 {
+  color: #25343d;
+}
+
+.conclusion-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.conclusion-title {
+  color: #25343d;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #25343d;
+  padding-bottom: 10px;
+}
+
+.conclusion-subtitle {
+  color: #25343d;
+  font-size: 1.8em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.conclusion-intro {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.conclusion-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.conclusion-resources {
+  background-color: #e9e9e9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.conclusion-resources ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.conclusion-resources li {
+  margin-bottom: 10px;
+}
+
+.conclusion-resources a {
+  color: #25343d;
+  text-decoration: none;
+  border-bottom: 1px solid #25343d;
+}
+
+.conclusion-resources a:hover {
+  color: #a70c26;
+  border-bottom-color: #a70c26;
+}
+
+.conclusion-footer {
+  font-style: italic;
+  color: #666;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* Estilos para o callout */
+
+.callout {
+  border: 1px solid #9ebbdd;
+  border-radius: 8px;
+  padding: 16px;
   margin: 0;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  font-size: 14px;
-  color: #fff;
+  color: #9ebbdd;
+  height: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.callout-info {
+  border-left: 4px solid #9ebbdd;
+}
+
+.callout-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.callout-icon {
+  margin-right: 8px;
+}
+
+.callout-title {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+p.callout-text {
+  margin-bottom: 8px;
+  line-height: 1.3;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.callout-link {
+  color: #9ebbdd;
+  text-decoration: none;
+  border-bottom: 1px solid #9ebbdd;
+}
+
+.callout-link:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #9ebbdd;
+}
+
+/* Layout de duas colunas */
+.two-column-container {
+  display: flex;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.column {
+  flex: 1;
+}
+
+.text-column p {
+  margin: 0;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+  .two-column-container {
+    flex-direction: column;
+  }
+}
+
+/*responsividade */
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2em;
+  }
+
+  .subtitle {
+    font-size: 0.9em;
+  }
+
+  .story-intro p {
+    font-size: 0.9em;
+  }
+
+  .sticky {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .steps {
+    width: 100%;
+  }
+
+  .step {
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .section {
+    max-width: 100%;
+  }
+
+  .conclusion-title, .section-title {
+    font-size: 1.5em;
+  }
 }
